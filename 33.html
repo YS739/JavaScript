@@ -3,39 +3,50 @@
   <head>
     <title>WEB1 - JavaScript</title>
     <meta charest="utf-8" />
+    <script>
+      function nightdayhandler(self) {
+        var target = document.querySelector("body");
+        if (self.value === "night") {
+          target.style.backgroundColor = "black";
+          target.style.color = "white";
+          self.value = "day";
+          var alist = document.querySelectorAll("a");
+          i = 0;
+          while (i < alist.length) {
+            alist[i].style.color = "powderblue";
+            i = i + 1;
+          }
+        } else {
+          target.style.backgroundColor = "white";
+          target.style.color = "black";
+          self.value = "night";
+          var alist = document.querySelectorAll("a");
+          i = 0;
+          while (i < alist.length) {
+            alist[i].style.color = "blue";
+            i = i + 1;
+          }
+        }
+      }
+    </script>
   </head>
   <body>
     <h1><a href="index.html">WEB</a></h1>
     <input
+      id="night_day"
       type="button"
       value="night"
-      onclick="
-      var target=document.querySelector('body');
-if(this.value ==='night'){
-  target.style.backgroundColor='black';
-  target.style.color='white';
-  this.value='day';
-  var alist=document.querySelectorAll('a');
-     i=0;
-    while(i<alist.length){
-    alist[i].style.color='powderblue';
-    i=i+1;
- }
- }
-  else {
- target.style.backgroundColor='white';
-  target.style.color='black';
-  this.value='night';
-  var alist=document.querySelectorAll('a');
-    i=0;
-    while(i<alist.length){
-    alist[i].style.color='blue';
-    i=i+1;
-}
-
-}
-  "
+      onclick="nightdayhandler(this);
+    "
     />
+    <input
+      id="night_day"
+      type="button"
+      value="night"
+      onclick="nightdayhandler(this);
+    "
+    />
+
     <ol>
       <li><a href="1.html">HTML</a></li>
       <li><a href="2.html">CSS</a></li>
@@ -44,7 +55,7 @@ if(this.value ==='night'){
     <h2>JavaScript</h2>
     <p>
       JavaScript is the world's most popular programming language. JavaScript is
-      the programming language of the Web. JavaScript is easy to learn. This
+      the programming language of the Web. JavaScript is easy to learn. self
       tutorial will teach you JavaScript from basic to advanced.
     </p>
   </body>
