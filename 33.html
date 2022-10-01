@@ -1,58 +1,28 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>WEB1 - JavaScript</title>
-    <meta charest="utf-8" />
-    <script>
-      function LlinkssetColor(color) {
-        var alist = document.querySelectorAll("a");
-        i = 0;
-        while (i < alist.length) {
-          alist[i].style.color = color;
-          i = i + 1;
-        }
+    <style>
+      .js {
+        font-weight: bold;
+        color: red;
       }
-      function BodysetColor(color) {
-        document.querySelector("body").style.color = color;
+      #first {
+        color: green;
       }
-      function BodysetBackgroundColor(color) {
-        document.querySelector("body").style.backgroundColor = color;
+      span {
+        color: blue;
       }
-      function nightdayhandler(self) {
-        var target = document.querySelector("body");
-        if (self.value === "night") {
-          BodysetBackgroundColor("black");
-          BodysetColor("white");
-          self.value = "day";
-          LlinkssetColor("powderblue");
-        } else {
-          BodysetBackgroundColor("white");
-          BodysetColor("black");
-          self.value = "night";
-          LlinkssetColor("blue");
-        }
-      }
-    </script>
+    </style>
   </head>
   <body>
     <h1><a href="index.html">WEB</a></h1>
-    <input
-      id="night_day"
-      type="button"
-      value="night"
-      onclick="nightdayhandler(this);
-    "
-    />
-    <ol>
-      <li><a href="1.html">HTML</a></li>
-      <li><a href="2.html">CSS</a></li>
-      <li><a href="3.html">JavaScript</a></li>
-    </ol>
-    <h2>JavaScript</h2>
+    <h2 style="background-color: coral; color: powderblue">JavaScrip</h2>
     <p>
-      JavaScript is the world's most popular programming language. JavaScript is
-      the programming language of the Web. JavaScript is easy to learn. self
-      tutorial will teach you JavaScript from basic to advanced.
+      <span id="first">JavaScript</span> is the world most popular programming
+      <span>language</span>. <span class="js">JavaScript</span> is the
+      programming language of the <span>Web</span>.
+      <span class="js">JavaScript</span> is easy to learn. This tutorial will
+      teach you <span class="js">JavaScript</span> from basic to advanced.
     </p>
   </body>
 </html>
