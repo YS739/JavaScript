@@ -7,18 +7,6 @@
   <body>
     <h1><a href="index.html">WEB</a></h1>
     <input
-      type="button"
-      value="night"
-      onclick="document.querySelector('body').style.backgroundColor='black';
-      document.querySelector('body').style.color='white';"
-    />
-    <input
-      type="button"
-      value="day"
-      onclick="document.querySelector('body').style.backgroundColor='white';
-      document.querySelector('body').style.color='black';"
-    />
-    <input
       id="night_day"
       type="button"
       value="night"
@@ -47,5 +35,40 @@
       the programming language of the Web. JavaScript is easy to learn. This
       tutorial will teach you JavaScript from basic to advanced.
     </p>
+    <input
+      id="night_day2"
+      type="button"
+      value="night"
+      onclick="
+  if(document.querySelector('#night_day2').value==='night'){
+    document.querySelector('body').style.backgroundColor='black';
+    document.querySelector('body').style.color='white';
+    document.querySelector('#night_day2').value='day';
+  }
+    else {
+    document.querySelector('body').style.backgroundColor='white';
+    document.querySelector('body').style.color='black';
+    document.querySelector('#night_day2').value='night';
+
+  }
+    "
+    />
+    <input
+      type="button"
+      value="night"
+      onclick="
+if(this.value ==='night'){
+  document.querySelector('body').style.backgroundColor='black';
+  document.querySelector('body').style.color='white';
+  this.value='day';
+}
+  else {
+  document.querySelector('body').style.backgroundColor='white';
+  document.querySelector('body').style.color='black';
+  this.value='night';
+
+}
+  "
+    />
   </body>
 </html>
