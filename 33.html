@@ -13,20 +13,23 @@
         }
       }
       function BodysetColor(color) {
-        target.style.color = "color";
+        document.querySelector("body").style.color = color;
+      }
+      function BodysetBackgroundColor(color) {
+        document.querySelector("body").style.backgroundColor = color;
       }
       function nightdayhandler(self) {
         var target = document.querySelector("body");
         if (self.value === "night") {
-          target.style.backgroundColor = "black";
+          BodysetBackgroundColor("black");
           BodysetColor("white");
           self.value = "day";
-          LinkssetColor("powderblue");
+          LlinkssetColor("powderblue");
         } else {
-          target.style.backgroundColor = "white";
+          BodysetBackgroundColor("white");
           BodysetColor("black");
           self.value = "night";
-          LinkssetColor("blue");
+          LlinkssetColor("blue");
         }
       }
     </script>
