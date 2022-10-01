@@ -4,28 +4,29 @@
     <title>WEB1 - JavaScript</title>
     <meta charest="utf-8" />
     <script>
+      function LlinkssetColor(color) {
+        var alist = document.querySelectorAll("a");
+        i = 0;
+        while (i < alist.length) {
+          alist[i].style.color = color;
+          i = i + 1;
+        }
+      }
+      function BodysetColor(color) {
+        target.style.color = "color";
+      }
       function nightdayhandler(self) {
         var target = document.querySelector("body");
         if (self.value === "night") {
           target.style.backgroundColor = "black";
-          target.style.color = "white";
+          BodysetColor("white");
           self.value = "day";
-          var alist = document.querySelectorAll("a");
-          i = 0;
-          while (i < alist.length) {
-            alist[i].style.color = "powderblue";
-            i = i + 1;
-          }
+          LinkssetColor("powderblue");
         } else {
           target.style.backgroundColor = "white";
-          target.style.color = "black";
+          BodysetColor("black");
           self.value = "night";
-          var alist = document.querySelectorAll("a");
-          i = 0;
-          while (i < alist.length) {
-            alist[i].style.color = "blue";
-            i = i + 1;
-          }
+          LinkssetColor("blue");
         }
       }
     </script>
@@ -39,14 +40,6 @@
       onclick="nightdayhandler(this);
     "
     />
-    <input
-      id="night_day"
-      type="button"
-      value="night"
-      onclick="nightdayhandler(this);
-    "
-    />
-
     <ol>
       <li><a href="1.html">HTML</a></li>
       <li><a href="2.html">CSS</a></li>
